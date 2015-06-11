@@ -1,0 +1,24 @@
+<div id="showsDetailsContent">
+    <span class="titleLabel">{{ showsDetails.title }}</span>
+    <div class="photoURLContainer">
+        <img class="photoURL" ng-src="{{ showsDetails.photoURL }}">
+        <span class="publicationLabel">Publicado el {{ showsDetails.datePublished }}</span>
+    </div>
+    <span class="bodyLabel">{{ showsDetails.body }}</span>
+    <div class="infoPlace">
+        <img class="showIcon" ng-src="assets/icons/shows/place.png">
+        <span>{{ showsDetails.place }}</span>
+    </div>
+    <div class="infoDate">
+        <img class="showIcon" ng-src="assets/icons/shows/clock.png">
+        <span>{{ showsDetails.dateShow }} {{ showsDetails.hourShow }}</span>
+    </div>
+    <div class="infoBandsWith">
+        <img class="showIcon" ng-src="assets/icons/shows/bands.png">
+        <span>{{ showsDetails.bandsWith }}</span>
+    </div>
+    <div id="map-canvas"></div>
+    <a href="https://www.google.es/maps/place/{{ showsDetails.linkGoogleMaps }}" target="_blank">
+        <span class="mapLabel">Ver en Google Maps</span>
+    </a>
+</div>

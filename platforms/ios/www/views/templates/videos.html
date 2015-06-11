@@ -1,0 +1,22 @@
+<div class="videosContent">
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()" pulling-text="Suelte para actualizar...">
+        </ion-refresher>
+        <ul>
+            <li ng-repeat="x in videos" ng-controller="videosItemController">
+                <a href="http://{{ x.youtubeURL }}" target="_blank">
+                    <div class="videoPreviewContainer">
+                        <span class="helper"></span>
+                    </div>
+                    <div class="videoDescriptionContainer">
+                        <p>{{ x.title }}</p>
+                        <p>{{ x.description }}</p>
+                    </div>
+                </a>
+            </li>
+            <li class="lastRow">
+                <span class="lastRowLabel">¿Más vídeos?</span>
+            </li>
+        </ul>
+    </ion-content>
+</div>

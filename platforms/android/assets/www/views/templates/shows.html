@@ -1,0 +1,30 @@
+<div class="showsContent">
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()" pulling-text="Suelte para actualizar...">
+        </ion-refresher>
+        <ul>
+            <li ng-repeat="x in shows">
+                <a ng-click="go('/showsDetails/' + x.id)">
+                    <div class="showsPhotoContainer">
+                        <img class="showsPhoto" ng-src="{{x.photoURL}}">
+                    </div>
+                    <div class="infoPlace">
+                        <img class="showIcon" ng-src="assets/icons/shows/place.png">
+                        <span>{{ x.place }}</span>
+                    </div>
+                    <div class="infoDate">
+                        <img class="showIcon" ng-src="assets/icons/shows/clock.png">
+                        <span>{{ x.dateShow }} {{ x.hourShow }}</span>
+                    </div>
+                    <div class="infoBandsWith">
+                        <img class="showIcon" ng-src="assets/icons/shows/bands.png">
+                        <span>{{ x.bandsWith }}</span>
+                    </div>
+                </a>
+            </li>
+            <li class="lastRow">
+                <span class="lastRowLabel">¿Más conciertos?</span>
+            </li>
+        </ul>
+    </ion-content>
+</div>

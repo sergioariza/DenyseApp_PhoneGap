@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/main.min.css" rel="stylesheet">
+    <link href="http://code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+    <link href="./css/snap.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="denyseApp" ng-controller="mainController">
+    <div class="snap-drawers">
+        <div id="menu" class="snap-drawer snap-drawer-left">
+            <ul>
+                <li class="menuTitle">
+                </li>
+                <li>
+                    <a href="#/news" class="snap-close"><img src="./assets/img/news.png"><!-- <span>Noticias</span> --></a>
+                </li>
+                <li class="shows">
+                    <a href="#/shows" class="snap-close"><img src="./assets/img/shows.png"><!-- <span>Conciertos</span> --></a>
+                </li>
+                <li class="videos">
+                    <a href="#/videos" class="snap-close"><img src="./assets/img/videos.png"><!-- <span>Videos</span> --></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="topBar">
+        <a href="" id="open-left">
+            <!-- <img src="assets/icons/menuIcon.png"> -->
+            <button class="cmn-toggle-switch cmn-toggle-switch__htx">
+                <span>toggle menu</span>
+            </button>
+        </a>
+        <div class="titleContainer">
+            <!-- <span ng-bind="title"></span> -->
+            <img class="title" ng-src="{{urlTitle}}" />
+        </div>
+    </div>
+    <div id="main" class="snap-content">
+        <div id="viewContainer" ng-view> </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- AngularJS files -->
+    <!-- <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/angular-route.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <!-- Ionic Framework -->
+    <script type="text/javascript" src="http://code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script type="text/javascript" src="./js/ngConfig.js"></script>
+    <script type="text/javascript" src="./js/controllers.js"></script>
+    <script type="text/javascript" src="./js/services.js"></script>
+    <script type="text/javascript" src="./js/factories.js"></script>
+    <script type="text/javascript" src="./js/directives.js"></script>
+    <!-- SnapJS -->
+    <script type="text/javascript" src="./js/snap.js"></script>
+    <!-- Google Maps API -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- jQuery Init -->
+    <script type="text/javascript" src="./js/jQueryInit.js"></script>
+</body>
+
+</html>

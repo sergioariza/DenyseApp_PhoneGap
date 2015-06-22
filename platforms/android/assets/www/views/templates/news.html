@@ -1,0 +1,21 @@
+<div class="newsContent">
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()" pulling-text="Suelte para actualizar...">
+        </ion-refresher>
+        <ul>
+            <li ng-repeat="x in news" on-finish-news-render="ngRepeatNewsFinished">
+                <a ng-click="go('/newsDetails/' + x.id)">
+                    <img class="newsPhoto" ng-src="{{x.photoURL}}">
+                    <span class="newsTitle">{{ x.title }}</span>
+                    <div class="newsBodyContainer">
+                        <p id="newsBody{{ x.id }} ">{{ x.body }}</p>
+                    </div>
+                    <span class="publishDate">{{ x.date }}</span>
+                </a>
+            </li>
+            <li class="lastRow">
+                <span class="lastRowLabel">¿Más noticias?</span>
+            </li>
+        </ul>
+    </ion-content>
+</div>
